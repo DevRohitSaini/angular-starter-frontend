@@ -1,0 +1,54 @@
+<aside id="sidebar" class="sidebar sidebar-nav">
+  <a [routerLink]="['/']" class="logo   decoration d-flex align-items-center">
+    <img src="../../../../assets/images/logo.png" alt="">
+    <span class="d-none text-white  d-lg-block">Frontend Demo</span>
+  </a>
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <!-- Dashboard Nav -->
+    <li class="nav-item" [routerLink]="['/dashboard']" [routerLinkActive]="['active']"
+      routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link collapsed">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <!-- End Dashboard Nav -->
+
+    <!-- user compnent -->
+    <li class="nav-item" [routerLink]="['/users']" [routerLinkActive]="['active']"
+      routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" >
+      <a class="nav-link collapsed" >
+        <i class="bi bi-people"></i><span>Users</span>
+      </a>
+    </li>
+    <!-- end user component -->       
+
+    <!-- Setting compnent -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i><span>Setting</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">        
+        <li  class="nav-item" [routerLink]="['/settings/payment']" [routerLinkActive]="['active']"
+        routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+          <a>
+            <i class="bi bi-circle "></i><span>Payment</span>
+          </a>
+        </li>
+      </ul>
+    </li>    
+    <!-- end Setting component -->
+
+    <!-- Public Page compnent -->
+    <li class="nav-item" [routerLink]="['/page']" [routerLinkActive]="['active']"
+      routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" >
+      <a class="nav-link collapsed" >
+        <i class="bi bi-buildings-fill"></i><span>Public Page</span>
+      </a>
+    </li>
+    <!-- end Public page component --> 
+
+    </ul>
+</aside>
+<!-- </div> -->

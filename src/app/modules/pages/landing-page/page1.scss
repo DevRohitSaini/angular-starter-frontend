@@ -1,0 +1,245 @@
+@import './../../../../assets/style/color.scss';
+@import './../../../../assets/style/fonts.scss';
+
+.hero {
+  padding: 75px 0;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  display: table;
+  position: relative;
+  background-image: url(../../../../assets/images/cover.jpg);
+  background-size: cover;
+  padding: 150px 0;
+  color: $light;
+  width: 100%;
+  height: 100vh;
+
+}
+
+h1 {
+  font-size: 62px;
+  margin: 0;
+
+}
+
+.hero:after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.hero-brand {
+  margin-bottom: 75px;
+  display: inline-block;
+  text-decoration: none !important;
+
+}
+
+.tagline {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  margin: 45px 0 75px 0;
+  color: $light;
+}
+
+.btn {
+  background-color: $btn-background;
+  font-weight: 500;
+  color: $light;
+  padding: 15px 45px;
+
+}
+
+.btn:hover {
+  background-color: $orangered;
+}
+
+section {
+  padding: 85px 0;
+}
+
+@media (max-width: 61.9em) {
+
+  section {
+    padding: 35px 0;
+  }
+
+  .features {
+    padding-bottom: 5px;
+  }
+
+  p {
+    margin: 0;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: $feature;
+    padding: 0 0 10px 50px;
+    line-height: 24px;
+  }
+
+  h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+
+  }
+
+  h3 {
+    font-size: 14px;
+    font-size: 18px !important;
+    color: $btn-background;
+
+  }
+}
+
+.stats-row {
+  margin-top: 65px;
+}
+
+.stats-col .circle {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #666;
+  border: 6px solid $btn-background;
+  border-radius: 50%;
+  padding: 55px 25px 0 25px;
+  position: relative;
+}
+
+/* ==================================================
+  Features Styling
+  ================================================== */
+.features {
+  padding-bottom: 45px;
+
+  h2 {
+    color: $btn-background;
+  }
+
+  .feature-col>div>div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .feature-col>div>div:last-child {
+    padding-left: 20px;
+  }
+
+  .feature-col .feature-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+    background: $btn-background;
+    color: $light;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+
+
+  .feature-col {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: $feature;
+    color: $btn-background;
+    display: table;
+    padding-bottom: 45px;
+
+  }
+}
+
+/* ==================================================
+  Contact Section
+  ================================================== */
+
+#contact {
+  background: #f7f7f7;
+  padding: 80px 0;
+.btn{
+  border-radius: 5px;
+}
+  .card {
+    text-align: center;
+
+    .bi {
+      font-size: 25px;
+      color: $btn-background;
+    }
+
+  }
+
+  .form-control {
+    border-color: transparent !important;
+  }
+
+  h2 {
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    color: $btn-background;
+  }
+
+  .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .info {
+    padding: 0 0 10px 50px;
+    line-height: 24px;
+  }
+
+  .info i {
+    font-size: 32px;
+    color: $btn-background;
+    float: left;
+    line-height: 0;
+  }
+
+  .php-email-form button[type=submit] {
+    background: $btn-background;
+    border: 0;
+    padding: 10px 24px;
+    margin-top: 15px;
+    color: $light;
+    transition: 0.4s;
+  }
+
+  .php-email-form button[type=submit]:hover {
+    background: #23c2e1;
+    margin-top: 15px;
+
+  }
+}
+
+.card {
+  border: none !important;
+  padding: 15px;
+}
+
+.card {
+  h3 {
+    margin-bottom: 15px;
+  }
+
+}

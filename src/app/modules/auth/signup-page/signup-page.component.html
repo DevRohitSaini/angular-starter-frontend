@@ -1,0 +1,89 @@
+<main class="body">
+  <div class="container">
+
+    <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+           <!-- logo div start  -->
+            <div class="d-flex justify-content-center py-4">
+              <a [routerLink]="['/']" class="logo decoration d-flex align-items-center w-auto">
+                <img src="../../../assets/images/logo.png" alt="">
+                <span class="d-none d-lg-block">Frontend Demo</span>
+              </a>
+            </div>
+            <!-- End Logo -->
+
+            <!-- card body start -->
+            <div class="card mb-3">
+
+              <div class="card-body">
+
+                <div class="pt-4 pb-2">
+                  <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
+                  <p class="text-center small">Enter your personal details to create account</p>
+                </div>
+
+                <form class="row g-3 needs-validation" [formGroup]="userBasicForm">
+                  <div class="col-12">
+                    <label for="yourName" class="form-label">Your Name</label>
+                    <input type="text" name="name" formControlName="name" class="form-control" id="yourName" required>
+                    <div  *ngIf="userBasicForm.get('name')?.hasError('required')" class="invalid-feedback">Please, enter your name!</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="yourEmail" class="form-label">Your Email</label>
+                    <input type="email" name="email" formControlName="email" class="form-control" id="yourEmail" required>
+                    <div *ngIf="userBasicForm.get('email')?.hasError('required')" class="invalid-feedback">Email address is required</div>
+                    <div *ngIf="userBasicForm.get('email')?.hasError('email')" class="invalid-feedback">Please enter a valid email address !</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="yourEmail" class="form-label">Your Place</label>
+                    <input formControlName="place" class="form-control" id="place" required>
+                    <div *ngIf="userBasicForm.get('place')?.hasError('required')" class="invalid-feedback">Please enter your place</div>
+                  </div>
+
+
+                  <div class="col-12">
+                    <label for="yourEmail" class="form-label">Your Phone</label>
+                    <input formControlName="phone" class="form-control" id="yourPhone" required>
+                    <div  *ngIf="userBasicForm.get('phone')?.hasError('required')" class="invalid-feedback">Please enter your phone number</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="yourPassword" class="form-label">Password</label>
+                    <input type="password" name="password" formControlName="password" class="form-control" id="yourPassword" required>
+                    <div  *ngIf="userBasicForm.get('password')?.hasError('required')" class="invalid-feedback">Password is required</div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                      <label class="form-check-label" for="acceptTerms">I agree and accept the <a class="decoration" href="#">terms and conditions</a></label>
+                      <!-- <div class="invalid-feedback">You must agree before submitting.</div> -->
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100" (click)="onReactiveFormSubmit('user')">Create Account</button>
+                  </div>
+                  <div class="col-12">
+                    <p class="small mb-0">Already have an account? <a class="decoration" [routerLink]="['/']">Log in</a></p>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+
+            <div class="credits">
+              Designed by <a class="decoration" target="_blank" href="https://myexpertise.io/">MyExpertise</a>
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+<!-- End #main -->

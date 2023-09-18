@@ -1,0 +1,9 @@
+<app-header (toggler)="toggle()"></app-header>
+
+<div class="main-page" [ngClass]="isToggle ? 'toggle' : ''">
+  <app-sidebar class="sidebar"></app-sidebar>
+  <main id="main" class="main">
+    <router-outlet></router-outlet>
+  </main>
+  <!-- <app-footer></app-footer> -->
+</div>

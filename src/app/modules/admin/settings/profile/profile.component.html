@@ -1,0 +1,120 @@
+<div align-items-center>
+
+  <div class="container-fluid">
+    <div class=" row">
+      <div class="card-body card  col-lg-12  ">
+        <div class="card-header">
+          <div class=" d-flex-2 w-100">
+            <div class="">
+              <h1 class="card-header-title">Profile Setting</h1>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- Tabs -->
+        <mat-tab-group [animationDuration]="'0'">
+
+          <!-- Personal details Tab -->
+          <mat-tab label="Personal details">
+            <ng-template matTabContent>
+              <ng-container>
+                <!-- Personal details form -->
+                <form class="row g-3" [formGroup]="profileForm">
+
+                  
+                  <div class="col-md-4">
+                    <mat-form-field class="">
+                      <mat-label>Name</mat-label>
+                      <input matInput [formControlName]="'name'">
+                    </mat-form-field>
+                    <div *ngIf="profileForm.get('name')?.hasError('required')" class="invalid-feedback">Field is
+                      required
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-4">
+                    <mat-form-field class="">
+                      <mat-label>Mobile</mat-label>
+                      <input matInput [formControlName]="'mobile'">
+                    </mat-form-field>
+                    <div *ngIf="profileForm.get('mobile')?.hasError('required')" class="invalid-feedback">Field is
+                      required
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <mat-form-field class="">
+                      <mat-label>Email</mat-label>
+                      <input matInput [formControlName]="'email'">
+                    </mat-form-field>
+                    <div *ngIf="profileForm.get('email')?.hasError('required')" class="invalid-feedback">Field is
+                      required
+                    </div>
+                    <div *ngIf="profileForm.get('email')?.hasError('email')" class="invalid-feedback">Please enter a
+                      valid
+                      email address !</div>
+                  </div>
+
+
+
+
+                  <div class="row g-3">
+                    <div class="col-md-auto">
+                      <button (click)="onReactiveFormSubmit()" class="btn btn-primary">Save</button>
+                    </div>
+                  </div>
+
+                </form>
+                <!-- End Form -->
+              </ng-container>
+            </ng-template>
+          </mat-tab>
+
+          <!-- Change password Tab -->
+          <mat-tab label="Change password">
+            <ng-template matTabContent>
+              <ng-container>
+                <!-- Change password form -->
+                <form class="row g-3" [formGroup]="passwordForm">
+                  
+                  <div class="col-md-4">
+                    <mat-form-field class="">
+                      <mat-label>New Password</mat-label>
+                      <input type="password" matInput [formControlName]="'password'" (keyup)="enableField($event)">
+                    </mat-form-field>                     
+                    <div *ngIf="passwordForm.get('password')?.hasError('required')" class="invalid-feedback">Field is
+                      required
+                    </div>                  
+                  </div>
+                  <div class="col-md-4">
+                    <mat-form-field class="">
+                      <mat-label>Password (Confirm)</mat-label>
+                      <input type="password" matInput [formControlName]="'matchPassword'" (keyup)="checkPassword($event)">
+                    </mat-form-field>
+                    <div *ngIf="passwordForm.get('matchPassword')?.hasError('required')" class="invalid-feedback">Field is
+                      required
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-auto">
+                      <button [disabled]="disabledFrom" (click)="resetPassword()" class="btn btn-primary ff">Save</button>
+                    </div>
+                  </div>
+
+                </form>
+                <!-- End Form -->
+              </ng-container>
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+        <!-- End Tabs -->
+
+
+      </div>
+    </div>
+  </div>
+</div>

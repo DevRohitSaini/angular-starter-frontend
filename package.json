@@ -1,0 +1,53 @@
+{
+  "name": "frontend-demo",
+  "version": "0.0.0",
+  "description": "Angular Starter",
+  "author":"myexpertise <rohit.saini@myexpertise.io>",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --configuration=production",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.2.10",
+    "@angular/cdk": "14.2.7",
+    "@angular/common": "^14.2.10",
+    "@angular/compiler": "^14.2.10",
+    "@angular/core": "^14.2.10",
+    "@angular/forms": "^14.2.10",
+    "@angular/material": "14.2.7",
+    "@angular/platform-browser": "^14.2.10",
+    "@angular/platform-browser-dynamic": "^14.2.10",
+    "@angular/router": "^14.2.10",
+    "@ngneat/transloco": "^4.2.1",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "file-saver": "^2.0.5",
+    "jquery": "^3.6.3",
+    "moment": "^2.29.4",
+    "ngx-bootstrap": "^9.0.0",
+    "ngx-google-places-autocomplete": "^2.0.5",
+    "popper.js": "^1.16.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.4.1",
+    "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.10",
+    "@angular/cli": "~14.2.10",
+    "@angular/compiler-cli": "^14.2.10",
+    "@types/file-saver": "^2.0.5",
+    "@types/jasmine": "~4.3.1",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.1",
+    "karma-chrome-launcher": "~3.1.1",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.8.4"
+  }
+}

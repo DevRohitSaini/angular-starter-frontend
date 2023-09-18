@@ -1,0 +1,31 @@
+  <table class="w-full  table col-lg-10 table-hover " mat-table matSort [dataSource]="data"
+    [trackBy]="trackByFn">
+    <ng-container *ngFor="let user of fields" matColumnDef="{{user.mat}}">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        {{user.header}}
+      </th>
+      <td align="start" mat-cell *matCellDef="let userBasic">
+        <span class="pr-6 whitespace-nowrap">
+          {{userBasic[user.fieldName]}}
+        </span>
+        <span *ngIf="user.fieldName=='action'" class='icon'>
+          <button class="btn btn-outline-success" [routerLink]="['edit', userBasic._id]">
+            <i class="bi bi-pencil"></i></button>
+
+          <button class="btn btn-outline-secondary" (click)="sendCredentialsMail(userBasic._id)">
+            <i class="bi  bi-send-plus-fill"></i>
+          </button>
+          <button class="btn btn-outline-warning" (click)="generateReceipt(userBasic._id)"><i
+              class="bi bi-printer"></i></button>
+          <button class="btn btn-outline-danger" (click)="delete(userBasic._id)"><i
+              class="bi bi-trash"></i></button>
+
+        </span>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="userBasicListTableColumns"></tr>
+    <tr class="stock-row h-16" mat-row *matRowDef="let row; columns: userBasicListTableColumns;"></tr>
+  </table>
+  <mat-paginator [pageSize]="10" [showFirstLastButtons]="true">
+  </mat-paginator>
+
