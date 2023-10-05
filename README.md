@@ -9,7 +9,7 @@ npm install
 
 ## Node version
 
-This project was generated with Node version : <= 14.20.1 || 16.14.0.
+This project was generated with Node version : >= 14.20.1 || 16.14.0.
 
 ## Development server
 
